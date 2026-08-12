@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Teks Argumentasi - Modul Interaktif</title>
+    <style>
+        /* --- RESET & BASIC STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            padding: 30px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+            color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        header .badge {
+            background: #3182ce;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        header h1 {
+            font-size: 26px;
+            margin-top: 10px;
+        }
+
+        header p {
+            color: #cbd5e0;
+            font-size: 14px;
+        }
+
+        /* --- SECTION STYLES --- */
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #1a365d;
+            border-left: 4px solid #3182ce;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* --- FEATURE: INTERACTIVE ACCORDION (CSS ONLY) --- */
+        .accordion-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Sembunyikan checkbox asli */
+        .accordion-item input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Label bertindak sebagai tombol klik */
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background-color: #f8fafc;
+            font-weight: 600;
+            font-size: 16px;
+            color: #2b6cb0;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .accordion-header:hover {
+            background-color: #ebf8ff;
+        }
+
+        /* Ikon panah */
+        .accordion-header::after {
+            content: '▲';
+            font-size: 12px;
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+
+        /* Isi konten hidden secara default */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.3s ease;
+            background-color: #ffffff;
+            padding: 0 20px;
+        }
+
+        /* Ketika checkbox di-check (diklik) */
+        .accordion-item input[type="checkbox"]:checked ~ .accordion-content {
+            max-height: 500px; /* Batas cukup tinggi agar muat */
+            padding: 16px 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .accordion-item input[type="checkbox"]:checked ~ .accordion-header::after {
+            transform: rotate(0deg);
+        }
+
+        .accordion-item input[type="checkbox"]:checked ~ .accordion-header {
+            background-color: #ebf8ff;
+        }
+
+        /* Highlight/Box di dalam konten */
+        .example-tag {
+            display: inline-block;
+            background-color: #e6fffa;
+            color: #234e52;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* --- TABLE STYLES --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #2b6cb0;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            font-size: 13px;
+            color: #a0aec0;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <span class="badge">Modul Interaktif</span>
+            <h1>Teks Argumentasi</h1>
+            <p>Mata Pelajaran Bahasa Indonesia — Kelas XI (Fase F)</p>
+        </header>
+
+        <!-- SECTION 1: PENGERTIAN -->
+        <section>
+            <h2>1. Pengertian Teks Argumentasi</h2>
+            <p><strong>Teks Argumentasi</strong> adalah teks yang berisi gagasan, alasan, dan bukti logis berbasis data untuk meyakinkan atau membuktikan suatu kebenaran kepada pembaca agar mereka menyetujui pandangan penulis.</p>
+        </section>
+
+        <!-- SECTION 2: INTERACTIVE STRUCTURE (ACCORDION) -->
+        <section>
+            <h2>2. Visualisasi Struktur Teks (Klik untuk Detail)</h2>
+            <p style="font-size: 14px; color: #718096; margin-bottom: 15px;">Klik pada tiap bagian struktur di bawah ini untuk melihat penjelasan dan contoh penerapannya:</p>
+
+            <!-- Bagian 1: Tesis -->
+            <div class="accordion-item">
+                <input type="checkbox" id="structure-1">
+                <label for="structure-1" class="accordion-header">
+                    1. Pendahuluan (Tesis / Isu Utama)
+                </label>
+                <div class="accordion-content">
+                    <p><strong>Fungsi:</strong> Memperkenalkan topik mendasar yang dibahas serta menyatakan pandangan/posisi penulis secara tegas di awal teks.</p>
+                    <br>
+                    <span class="example-tag">Contoh Penerapan:</span>
+                    <p style="font-style: italic; color: #4a5568; background: #f7fafc; padding: 10px; border-radius: 4px;">"Ketergantungan masyarakat terhadap beras sebagai sumber karbohidrat utama perlu segera dievaluasi. Diversifikasi pangan berbasis bahan lokal seperti singkong dan sagu merupakan langkah strategis untuk mewujudkan ketahanan pangan yang berkelanjutan."</p>
+                </div>
+            </div>
+
+            <!-- Bagian 2: Tubuh Argumen -->
+            <div class="accordion-item">
+                <input type="checkbox" id="structure-2">
+                <label for="structure-2" class="accordion-header">
+                    2. Tubuh Argumen (Pembuktian & Data)
+                </label>
+                <div class="accordion-content">
+                    <p><strong>Fungsi:</strong> Berisi serangkaian alasan logis, fakta riil, hasil riset, atau data statistik yang secara mendalam membuktikan dan mendukung pernyataan tesis di awal.</p>
+                    <br>
+                    <span class="example-tag">Contoh Penerapan:</span>
+                    <p style="font-style: italic; color: #4a5568; background: #f7fafc; padding: 10px; border-radius: 4px;">"Berdasarkan data Kementerian Pertanian, potensi lahan untuk tanaman pangan non-beras sangat luas. Mengandalkan satu jenis komoditas saja membuat pasokan pangan nasional rentan terhadap ancaman krisis iklim global."</p>
+                </div>
+            </div>
+
+            <!-- Bagian 3: Kesimpulan -->
+            <div class="accordion-item">
+                <input type="checkbox" id="structure-3">
+                <label for="structure-3" class="accordion-header">
+                    3. Kesimpulan (Penegasan Ulang)
+                </label>
+                <div class="accordion-content">
+                    <p><strong>Fungsi:</strong> Menyajikan ringkasan dari seluruh argumen dan menegaskan kembali posisi penulis, sering kali disertai saran atau rekomendasi solusi.</p>
+                    <br>
+                    <span class="example-tag">Contoh Penerapan:</span>
+                    <p style="font-style: italic; color: #4a5568; background: #f7fafc; padding: 10px; border-radius: 4px;">"Oleh karena itu, kampanye dan pemanfaatan bahan pangan lokal harus terus ditingkatkan. Dengan mengonsumsi pangan beragam, kita tidak hanya menjaga stabilitas pangan tetapi juga memberdayakan petani daerah."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: FAKTA VS OPINI -->
+        <section>
+            <h2>3. Membedakan Fakta dan Opini</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Indikator</th>
+                        <th style="width: 40%;">Fakta</th>
+                        <th style="width: 40%;">Opini</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sifat</strong></td>
+                        <td>Objektif & teruji kebenarannya secara nyata.</td>
+                        <td>Subjektif & berisi penilaian pribadi.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ciri Data</strong></td>
+                        <td>Memuat angka pasti, tanggal, lokasi, atau riset.</td>
+                        <td>Memuat kata kiasan/relatif (<em>mungkin, sebaiknya</em>).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            &copy; Media Pembelajaran Digital Bahasa Indonesia — Bahasa & Sastra Indonesia
+        </footer>
+    </div>
+
+</body>
+</html>
