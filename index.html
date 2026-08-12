@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Teks Argumentasi - Kelas XI</title>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* --- TEMA 2: SOFT BLUE & LAVENDER --- */
+    :root {
+      --bg-main: #F4F7FC;       /* Background utama soft blue-gray */
+      --bg-card: #FFFFFF;       /* Latar kartu putih bersih */
+      --primary: #7091E6;       /* Soft Steel Blue */
+      --primary-hover: #5B7EC9;
+      --primary-light: #E0E8FF; /* Light blue aksen */
+      --secondary: #EDE8F5;     /* Soft Lavender */
+      --secondary-dark: #3D3B40;
+      --text-main: #2D3748;     /* Warna teks gelap nyaman di mata */
+      --text-muted: #718096;    /* Teks sekunder */
+      --border-color: #E2E8F0;  /* Garis batas tipis */
+      --shadow: 0 4px 20px rgba(112, 145, 230, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
+
+    /* Container Utama */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header / Hero Section */
+    header {
+      background: linear-gradient(135deg, var(--primary), #86A7FC);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-radius: 0 0 24px 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: var(--secondary-dark);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-weight: 400;
+      opacity: 0.95;
+      font-size: 1rem;
+    }
+
+    /* Card Styling */
+    .card {
+      background-color: var(--bg-card);
+      border-radius: 16px;
+      padding: 1.8rem;
+      margin-bottom: 1.8rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Grid Ciri-Ciri */
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .grid-item {
+      background-color: var(--bg-main);
+      padding: 1rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .grid-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-main);
+    }
+
+    .grid-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Tabel Fakta vs Opini */
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.95rem;
+    }
+
+    th {
+      background-color: var(--secondary);
+      color: var(--secondary-dark);
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: var(--bg-main);
+    }
+
+    /* Accordion Interaktif */
+    .accordion-item {
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      margin-bottom: 0.8rem;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      width: 100%;
+      background-color: var(--bg-main);
+      padding: 1rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: var(--primary-light);
+    }
+
+    .accordion-content {
+      padding: 1rem;
+      display: none;
+      background-color: var(--bg-card);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Highlighting Contoh Teks */
+    .example-box {
+      background-color: var(--primary-light);
+      border-left: 5px solid var(--primary);
+      padding: 1.2rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .example-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <span class="badge">Bahasa Indonesia Kelas XI • Kurikulum Merdeka</span>[cite: 1]
+    <h1>Materi Teks Argumentasi</h1>[cite: 1]
+    <p>Ringkasan Lengkap: Pengertian, Ciri, Struktur, & Kebahasaan</p>
+  </header>
+
+  <div class="container">
+
+    <!-- 1. PENGERTIAN -->
+    <div class="card">
+      <h2>📌 1. Pengertian Teks Argumentasi</h2>
+      <p>
+        <strong>Teks Argumentasi</strong> adalah jenis teks yang berisi gagasan, pendapat, pemikiran, atau alasan logis yang bertujuan untuk meyakinkan, memengaruhi, atau mengajak pembaca agar memiliki pandangan yang sama dan menyetujui pendapat yang disampaikan oleh penulis[cite: 1].
+      </p>
+    </div>
+
+    <!-- 2. CIRI-CIRI -->
+    <div class="card">
+      <h2>✨ 2. Ciri-Ciri Teks Argumentasi</h2>
+      <div class="grid-2x2">
+        <div class="grid-item">
+          <h3>Objektif & Logis</h3>[cite: 1]
+          <p>Disusun berdasarkan penalaran rasional dan masuk akal, bukan emosi subjektif[cite: 1].</p>
+        </div>
+        <div class="grid-item">
+          <h3>Berbasis Data & Fakta</h3>[cite: 1]
+          <p>Dilengkapi bukti valid seperti data statistik atau hasil penelitian[cite: 1].</p>
+        </div>
+        <div class="grid-item">
+          <h3>Bahasa Lugas</h3>[cite: 1]
+          <p>Menggunakan bahasa baku yang jelas, efektif, dan tidak ambigu[cite: 1].</p>
+        </div>
+        <div class="grid-item">
+          <h3>Kohesi Kausalitas</h3>[cite: 1]
+          <p>Memakai kata hubung sebab-akibat untuk menghubungkan argumen[cite: 1].</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. PERBEDAAN FAKTA & OPINI -->
+    <div class="card">
+      <h2>⚖️ 3. Perbedaan Fakta dan Opini</h2>[cite: 1]
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Pembeda</th>[cite: 1]
+              <th>Fakta</th>[cite: 1]
+              <th>Opini</th>[cite: 1]
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Sifat</strong></td>[cite: 1]
+              <td>Objektif (Dapat dibuktikan kebenarannya secara empiris)[cite: 1]</td>
+              <td>Subjektif (Berisi pendapat, gagasan, atau penilaian pribadi)[cite: 1]</td>
+            </tr>
+            <tr>
+              <td><strong>Ciri Data</strong></td>[cite: 1]
+              <td>Memiliki data akurat, angka pasti, waktu, dan tempat jelas[cite: 1]</td>
+              <td>Menggunakan kata relatif/tentatif (<i>sebaiknya, mungkin, menurut saya</i>)[cite: 1]</td>
+            </tr>
+            <tr>
+              <td><strong>Contoh</strong></td>[cite: 1]
+              <td>"Sagu merupakan salah satu makanan pokok masyarakat Maluku dan Papua."[cite: 1]</td>
+              <td>"Sagu terasa jauh lebih lezat dan sehat jika dibandingkan dengan nasi."[cite: 1]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4. STRUKTUR TEKS (INTERAKTIF ACCORDION) -->
+    <div class="card">
+      <h2>🧩 4. Struktur Teks Argumentasi</h2>[cite: 1]
+      <p style="margin-bottom: 1rem; color: var(--text-muted); font-size: 0.9rem;">Klik pada bagian struktur di bawah ini untuk melihat detailnya:</p>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          1. Pendahuluan (Tesis) <span>+</span>[cite: 1]
+        </button>
+        <div class="accordion-content">
+          Berisi pengenalan isu, latar belakang masalah, dan posisi atau pandangan umum penulis terhadap topik yang dibahas[cite: 1].
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          2. Tubuh Argumen (Pembuktian) <span>+</span>[cite: 1]
+        </button>
+        <div class="accordion-content">
+          Berisi serangkaian alasan, analisis, data pendukung, serta bukti nyata yang memperkuat tesis[cite: 1]. Terdiri dari beberapa paragraf terstruktur[cite: 1].
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          3. Kesimpulan (Penutup) <span>+</span>[cite: 1]
+        </button>
+        <div class="accordion-content">
+          Ringkasan dari poin-poin utama, penegasan kembali atas posisi penulis, serta dapat disertai rekomendasi, saran, atau solusi[cite: 1].
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. CIRI KEBAHASAAN -->
+    <div class="card">
+      <h2>📝 5. Ciri Kebahasaan</h2>[cite: 1]
+      <ul style="padding-left: 1.2rem; line-height: 1.8;">
+        <li><strong>Kata Kerja Relasional/Mental:</strong> Menyatakan hubungan makna atau proses pemikiran (contoh: <i>meyakini, menunjukkan, berpendapat, menyebabkan</i>)[cite: 1].</li>
+        <li><strong>Konjungsi Antarkalimat:</strong> Penghubung paragraf untuk menjaga kepaduan gagasan (contoh: <i>oleh karena itu, selain itu, dengan demikian</i>)[cite: 1].</li>
+        <li><strong>Adverbia Kuantitatif/Frekuensi:</strong> Keterangan untuk mempertegas kepastian (contoh: <i>sebagian besar, mayoritas, sering kali, selalu</i>)[cite: 1].</li>
+      </ul>
+    </div>
+
+    <!-- 6. CONOH TEKS -->
+    <div class="card">
+      <h2>💡 Contoh Teks Argumentasi Singkat</h2>[cite: 1]
+      
+      <div class="example-box">
+        <span class="example-title">Pendahuluan (Tesis)</span>[cite: 1]
+        <p>Ketergantungan masyarakat Indonesia terhadap beras sebagai sumber karbohidrat utama perlu segera dievaluasi[cite: 1]. Diversifikasi pangan lokal menjadi langkah strategis untuk mewujudkan ketahanan pangan nasional yang lebih berkelanjutan[cite: 1].</p>
+      </div>
+
+      <div class="example-box">
+        <span class="example-title">Tubuh Argumen</span>[cite: 1]
+        <p>Indonesia memiliki kekayaan hayati pangan lokal yang sangat beragam, seperti singkong, sagu, jagung, dan ubi jalar[cite: 1]. Berdasarkan data Kementerian Pertanian, potensi lahan untuk tanaman pangan non-beras sangat luas[cite: 1]. Mengandalkan satu jenis komoditas saja membuat ketahanan pangan rentan terhadap ancaman krisis iklim dan alih fungsi lahan sawah[cite: 1].</p>
+      </div>
+
+      <div class="example-box">
+        <span class="example-title">Kesimpulan (Penutup)</span>[cite: 1]
+        <p>Oleh karena itu, edukasi dan pemanfaatan bahan pangan lokal harus terus ditingkatkan[cite: 1]. Dengan mengonsumsi beragam pangan lokal, Indonesia tidak hanya menguatkan ketahanan pangannya, tetapi juga memajukan perekonomian petani daerah[cite: 1].</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© Media Pembelajaran Bahasa Indonesia - Netlify Deployment</p>
+    </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT UNTUK AKSI INTERAKTIF ACCORDION -->
+  <script>
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('span');
+      
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.textContent = "+";
+      } else {
+        content.style.display = "block";
+        icon.textContent = "-";
+      }
+    }
+  </script>
+
+</body>
+</html>
